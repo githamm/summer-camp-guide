@@ -91,7 +91,7 @@
                         <th class="min-tablet">Date Start</th>
                         <th class="min-tablet">Date End</th>
                         <th class="none">Date Detail</th>
-                        <th class="desktop">Cost</th>
+                        <th class="desktop">Cost Range</th>
                         <th class="none">Cost Detail</th>
                         <th class="desktop">Ages</th>
                         <th class="none">Description</th>
@@ -106,7 +106,7 @@
     <script>
     $('#summer-camp-table').dataTable({
         ajax: 'summer-camps-all-2017.txt',
-        order: [2, "asc"],
+        order: [1, "asc"],
         paging: true,
         pagingType: 'numbers',
         pageLength: 20,
@@ -136,23 +136,25 @@
             }
         }, {
             "data": "campType",
-            "orderable": false
+            "orderable": true
         }, {
             "data": "campCategory",
-            "orderable": false
+            "orderable": true
         }, {
             "data": "campSpecialty"
         }, {
             "data": "dateFrom",
-            "orderable": false
+            "type": "date",
+            "orderable": true
         }, {
             "data": "dateTo",
-            "orderable": false
+            "type": "date",
+            "orderable": true
         }, {
             "data": "dateDetail"
         }, {
             "data": "costCategory",
-            "orderable": false
+            "orderable": true
         }, {
             "data": "costDetail"
         }, {
