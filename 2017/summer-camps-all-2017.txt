@@ -290,7 +290,7 @@
   },
   {
     "campName": "Summer Magic",
-    "city": "Meet in Denver",
+    "city": "Denver (meet in Denver)",
     "emailAddress": "rocky2323@aol.com",
     "phoneNumber": "720-335-0854",
     "website": "none",
@@ -1241,24 +1241,6 @@
     "ageRange": "8-12",
     "descriptionBrief": "ENOR Environmental Discovery Camp is an outdoor educational program sponsored by Jefferson County 4-H for children 3rd - 6th grade. Camp  takes place at various local open space parks and public lands.",
     "descriptionDetailed": "Distinct from other outdoor camps are ENOR’s FOCUS, OUTDOOR ACTIVITY, CARE, AND PARTNERSHIPS.\nENOR’s FOCUS is environmental education and youth development rather than recreation.  Each day the curriculum highlights unique environmental and social themes that guide learning.  Science, math, history, drama, art, and teamwork are woven into the activities to meet the diverse interests of the young learners.  \nOUTDOOR ACTIVITY: To encourage healthy lifestyles, active engagement with the outdoors, and perseverance through challenge, the camp day includes hiking in local parks and open spaces.  Campers visit a unique location each day.  \nCARE: Campers are assigned to one caring educator for the week.  This gives campers the opportunity to bond with their leader and peers, creating a pathway to comfort and safety, supporting an environment of learning.  Camp staff is made up of trained professionals, many are licensed teachers, and all are First Aid/CPR certified.\nPARTNERSHIPS: Personalized instruction is paired with supplemental programming from a number of community partners that enhance the opportunity for the campers to broaden their horizons and interact with professionals in various fields."
-  },
-  {
-    "campName": "",
-    "city": "",
-    "emailAddress": "",
-    "phoneNumber": "",
-    "website": "",
-    "campType": "",
-    "campCategory": "",
-    "campSpecialty": "",
-    "dateFrom": "",
-    "dateTo": "",
-    "dateDetail": "",
-    "costCategory": "",
-    "costDetail": "",
-    "ageRange": "",
-    "descriptionBrief": "",
-    "descriptionDetailed": ""
   },
   {
     "campName": "Art Students League of Denver",
@@ -2612,7 +2594,7 @@
   },
   {
     "campName": "Earth Knack Family Survival Camp",
-    "city": "LITTLETON",
+    "city": "Littleton",
     "emailAddress": "DPCamp@earthknackgathering.com",
     "phoneNumber": "720-263-6122",
     "website": "EarthKnackGathering.com",
@@ -11306,7 +11288,7 @@
   },
   {
     "campName": "YMCA of Boulder Valley Fun in the Sun Camp",
-    "city": "Boulder and Broomfield Counties",
+    "city": "Boulder/Broomfield",
     "emailAddress": "becca.mack@ymcabv.org",
     "phoneNumber": "303-443-4474",
     "website": "ymcabv.org",
@@ -11648,7 +11630,7 @@
   },
   {
     "campName": "YMCA of Boulder Valley Sports Camp",
-    "city": "Longmont; Boulder",
+    "city": "Longmont/Boulder",
     "emailAddress": "sportscamp@ymcabv.org",
     "phoneNumber": "303-443-4474",
     "website": "ymcabv.org",
@@ -11666,7 +11648,7 @@
   },
   {
     "campName": "YMCA of Boulder Valley Adventure Camp",
-    "city": "Longmont; Boulder",
+    "city": "Longmont/Boulder",
     "emailAddress": "adventure@ymcabv.org",
     "phoneNumber": "303-443-4474",
     "website": "ymcabv.org",
@@ -11720,7 +11702,7 @@
   },
   {
     "campName": "YMCA of Boulder Valley Teen Camp",
-    "city": "Boulder; Longmont",
+    "city": "Boulder/Longmont",
     "emailAddress": "teen.camp@ymcabv.org",
     "phoneNumber": "303-443-4474",
     "website": "ymcabv.org",
@@ -11738,7 +11720,7 @@
   },
   {
     "campName": "YMCA Camp Ora Penn",
-    "city": "Nederland; drop off at Boulder Y or Platt Middle School",
+    "city": "Boulder/Nederland",
     "emailAddress": "Becca.Mack@ymcabv.org",
     "phoneNumber": "303-443-4474",
     "website": "ymcabv.org",
@@ -11751,7 +11733,7 @@
     "costCategory": "$251-500",
     "costDetail": "financial assistance available",
     "ageRange": "7-11",
-    "descriptionBrief": "YMCA Camp Ora Penn is a new outdoor, nature-based program where campers hike local trails, learn about nature, practice archery, explore ponds, build forts and play games!",
+    "descriptionBrief": "YMCA Camp Ora Penn is a new outdoor, nature-based program where campers hike local trails, learn about nature, practice archery, explore ponds, build forts and play games! Drop off at Boulder Y or Platt Middle School.",
     "descriptionDetailed": ""
   },
   {
