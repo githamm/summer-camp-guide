@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <!-- Standard DataTables -->
     <!-- <link href="http://cdn.datatables.net/1.10.0/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/> -->
-    <link href="https://cdn.datatables.net/responsive/2.0.1/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
     <!-- GOOGLE FONTS -->
@@ -32,7 +32,7 @@
     <!-- Foundation -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <!-- <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> -->
-    <script src="https://cdn.datatables.net/responsive/2.0.1/js/dataTables.responsive.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-de.js"></script>
     <!-- <script src="ColumnFilterWidgets.js"></script> -->
     <style>
@@ -75,16 +75,24 @@
     <form class='filter-form'>
         <h3>Filters</h3>
         <div>
-            <label>Name :</label>
-            <input type='text' value='' class='filter' data-column-index='0'>
-        </div>
-        <div>
-            <label>Postion :</label>
+            <label>City :</label>
+            <!-- NOT WORKING -->
+            <!-- <select>
+                <option value='' disabled="disabled" selected="selected">Please select a city</option>
+                <option value='Allenspark' class='filter' data-column-index='0'>Allenspark</option>
+                <option value='Boulder' class='filter' data-column-index='0'>Bouder</option>
+                <option value='Brighton' class='filter' data-column-index='0'>Brighton</option>
+            </select> -->
+            <label>City :</label>
             <input type='text' value='' class='filter' data-column-index='1'>
         </div>
         <div>
-            <label>Office :</label>
-            <input type='text' value='' class='filter' data-column-index='2'>
+            <label>Camp type :</label>
+            <input type='text' value='' class='filter' data-column-index='5'>
+        </div>
+        <div>
+            <label>Camp category :</label>
+            <input type='text' value='' class='filter' data-column-index='6'>
         </div>
         <button type="button" class="filter-button">
             search
@@ -94,10 +102,9 @@
     <!-- TABLE -->
     <div class="row">
         <div class="large-12 columns">
-            <table id="summer-camp-table" class="table-striped table-bordered">
+            <table id="summer-camp-table" class="stripe" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th></th>
                         <th class="all">Name</th>
                         <th class="all">City</th>
                         <th class="none">E-mail</th>
@@ -125,8 +132,10 @@
     $(document).ready(function() {
         var campTable = $('#summer-camp-table').DataTable({
             "ajax": 'summer-camps-all-2017.txt',
+            responsive: true,
             columns: [
-                { data: 'city' },
+                { data: 'campName' },
+                { data: 'city'},
                 { data: 'emailAddress' },
                 { data: 'phoneNumber' },
                 { data: 'website' },
