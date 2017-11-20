@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Summer Camp Directory 2017 | The Denver Post</title>
+    <title>Summer Camp Directory 2018 | The Denver Post</title>
     <link rel="canonical" href="http://extras.denverpost.com/summercamps/2017/index.html" />
     <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
     <meta name="distribution" content="global" />
     <meta name="robots" content="index, nofollow" />
-    <meta name="title" content="Summer Camp Directory 2017" />
+    <meta name="title" content="Summer Camp Directory 2018" />
     <meta name="language" content="en, sv" />
     <meta name="Copyright" content="Copyright &copy; The Denver Post." />
     <link rel="author" href="humans.txt" />
@@ -136,9 +136,19 @@
             columns: [
                 { data: 'campName' },
                 { data: 'city'},
-                { data: 'emailAddress' },
+                { data:
+                    'emailAddress',
+                    render: function ( data, type, row ) {
+                        return  '<a href="mailto:' + data + '">' + data + '</a>'; 
+                    }
+                },
                 { data: 'phoneNumber' },
-                { data: 'website' },
+                { data:
+                    'website',
+                    render: function ( data, type, row ) {
+                        return '<a href="http://' + data + '" target="_blank">' + data + '</a>';
+                    }
+                },
                 { data: 'campType' },
                 { data: 'campCategory' },
                 { data: 'campSpecialty' },
