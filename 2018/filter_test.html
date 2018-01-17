@@ -59,6 +59,11 @@
     .column-filter-widget-selected-terms {
         clear: left;
     }
+
+    /* MOVES FOOTER TO TOP */
+    tfoot {
+        display: table-header-group;
+    }
     /* td.details-control.sorting_1 {
                 padding: 0;
                 top: 9px;
@@ -72,37 +77,6 @@
 </head>
 
 <body>
-    <form class='filter-form'>
-        <h3>Filters</h3>
-        <div>
-            <!-- NOT WORKING -->
-            <!-- <select>
-                <option value='' disabled="disabled" selected="selected">Please select a city</option>
-                <option value='Allenspark' class='filter' data-column-index='0'>Allenspark</option>
-                <option value='Boulder' class='filter' data-column-index='0'>Bouder</option>
-                <option value='Brighton' class='filter' data-column-index='0'>Brighton</option>
-            </select> -->
-            <label>City :</label>
-            <input type='text' value='' class='filter' data-column-index='1'>
-        </div>
-        <div>
-            <label>Camp type :</label>
-            <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
-            <select id="campType" class="filter" name="filter" data-column-index='5'>
-                <option value="Day camp">Day camp</option>
-                <option value="Overnight camp">Overnight camp</option>
-                <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
-            </select>
-        </div>
-        <div>
-            <label>Camp category :</label>
-            <input type='text' value='' class='filter' data-column-index='6'>
-        </div>
-        <button type="button" class="filter-button">
-            search
-        </button>
-    </form>
-    <hr />
     <!-- TABLE -->
     <div class="row">
         <div class="large-12 columns">
@@ -128,6 +102,24 @@
                     </tr>
                 </thead>
                 <tfoot>
+                    <tr>
+                        <th><select type="hidden">Name</select></th>
+                        <th>City</th>
+                        <th>E-mail</th>
+                        <th>Phone</th>
+                        <th>Website</th>
+                        <th>Camp Type</th>
+                        <th>Camp Category</th>
+                        <th>Camp Detail</th>
+                        <th>Date Start</th>
+                        <th>Date End</th>
+                        <th>Date Detail</th>
+                        <th>Cost</th>
+                        <th>Cost Detail</th>
+                        <th>Ages</th>
+                        <th>Description</th>
+                        <th>Details</th>
+                    </tr>
                 </tfoot>
             </table>
         </div>
@@ -164,25 +156,32 @@
                 { data: 'ageRange' },
                 { data: 'descriptionBrief' },
                 { data: 'descriptionDetailed' }
-            ]
-        });
-        $('.filter-button').on('click', function() {
-            //clear global search values
-            campTable.search('');
-            $('.filter').each(function() {
-                if (this.value.length) {
-                    campTable.column($(this).data('columnIndex')).search(this.value);
-                }
-            });
-            campTable.draw();
-        });
+            ],
+            initComplete: function() {
+                this.api().columns().every(function() {
+                    var column = this;
+                    var select = $('<select><option value=""></option></select>')
+                        .appendTo($(column.footer()).empty())
+                        .on('change', function() {
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
 
-        $(".dataTables_filter input").on('keyup change', function() {
-            //clear column search values
-            campTable.columns().search('');
-            //clear input values
-            $('.filter').val('');
+                            column
+                                .search(val ? '^' + val + '$' : '', true, false)
+                                .draw();
+                        });
+
+                    column.data().unique().sort().each(function(d, j) {
+                        select.append('<option value="' + d + '">' + d + '</option>')
+                    });
+                });
+            }
         });
+        // HIDE A COLUMN
+        // campTable.column(0).visible(false);
+        //     var idx = table.column(1).index('visible');
+        //     alert(idx);
     });
     </script>
 </body>
