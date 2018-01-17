@@ -17,21 +17,15 @@
     <meta name="news_keywords" content="summer camps, camp, activities, kids, Denver, Colorado">
     <meta name="google-site-verification" content="2bKNvyyGh6DUlOvH1PYsmKN4KRlb-0ZI7TvFtuKLeAc" />
     <!-- STYLE SHEETS -->
-    <!-- Foundation -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-    <!-- Standard DataTables -->
-    <!-- <link href="http://cdn.datatables.net/1.10.0/css/jquery.dataTables.css" rel="stylesheet" type="text/css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.foundation.min.css" />
     <link href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
-    <!-- GOOGLE FONTS -->
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- Foundation -->
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <!-- <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
+    <script src="dataTables.min.js"></script>
+    <script src="http://extras.denverpost.com/foundation/js/foundation.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-de.js"></script>
     <!-- <script src="ColumnFilterWidgets.js"></script> -->
@@ -59,113 +53,109 @@
     .column-filter-widget-selected-terms {
         clear: left;
     }
-    /* td.details-control.sorting_1 {
-                padding: 0;
-                top: 9px;
-                left: 2px;
-            } */
 
     div.dataTables_wrapper div.dataTables_filter input {
         margin-bottom: 15px;
+    }
+
+    .hidden {
+        display: none;
     }
     </style>
 </head>
 
 <body>
-    <form class='filter-form'>
-        <h3>Filters</h3>
-        <div>
-            <!-- NOT WORKING -->
-            <!-- <select>
-                <option value='' disabled="disabled" selected="selected">Please select a city</option>
-                <option value='Allenspark' class='filter' data-column-index='0'>Allenspark</option>
-                <option value='Boulder' class='filter' data-column-index='0'>Bouder</option>
-                <option value='Brighton' class='filter' data-column-index='0'>Brighton</option>
-            </select> -->
-            <label>City:</label>
-            <!-- <input type='text' value='' class='filter' data-column-index='1'> -->
-            <select id="city" class="filter" data-column-index='1'>
-                <option value=" ">All</option>
-                <option value="Aurora">Aurora</option>
-                <option value="Bailey">Bailey</option>
-                <option value="Boulder">Boulder</option>
-                <option value="Breckenridge ">Breckenridge </option>
-                <option value="Brighton">Brighton</option>
-                <option value="Centennial">Centennial</option>
-                <option value="Clark">Clark</option>
-                <option value="Cortez">Cortez</option>
-                <option value="Denver">Denver</option>
-                <option value="Durango">Durango</option>
-                <option value="Empire">Empire</option>
-                <option value="Englewood">Englewood</option>
-                <option value="Estes Park">Estes Park</option>
-                <option value="Florissant">Florissant</option>
-                <option value="Golden">Golden</option>
-                <option value="Granby">Granby</option>
-                <option value="Grand Lake">Grand Lake</option>
-                <option value="Greeley">Greeley</option>
-                <option value="Greenwood Village">Greenwood Village</option>
-                <option value="Highlands Ranch">Highlands Ranch</option>
-                <option value="Jamestown">Jamestown</option>
-                <option value="Lafayette">Lafayette</option>
-                <option value="Lakewood">Lakewood</option>
-                <option value="Littleton">Littleton</option>
-                <option value="Meeker">Meeker</option>
-                <option value="Meredith">Meredith</option>
-                <option value="Moab">Moab</option>
-                <option value="Morrison">Morrison</option>
-                <option value="Nathrop">Nathrop</option>
-                <option value="Parker">Parker</option>
-                <option value="Sedalia">Sedalia</option>
-                <option value="Steamboat Springs">Steamboat Springs</option>
-                <option value="Vail">Vail</option>
-                <option value="Various">Various</option>
-            </select>
+    <form>
+        <div class="row">
+            <div class="large-6 medium-6 small-6 columns">
+                <label>City:</label>
+                <!-- <input type='text' value='' class='filter' data-column-index='1'> -->
+                <select id="city" class="filter" data-column-index='1'>
+                    <option value=" ">All</option>
+                    <option value="Aurora">Aurora</option>
+                    <option value="Bailey">Bailey</option>
+                    <option value="Boulder">Boulder</option>
+                    <option value="Breckenridge ">Breckenridge </option>
+                    <option value="Brighton">Brighton</option>
+                    <option value="Centennial">Centennial</option>
+                    <option value="Clark">Clark</option>
+                    <option value="Cortez">Cortez</option>
+                    <option value="Denver">Denver</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Empire">Empire</option>
+                    <option value="Englewood">Englewood</option>
+                    <option value="Estes Park">Estes Park</option>
+                    <option value="Florissant">Florissant</option>
+                    <option value="Golden">Golden</option>
+                    <option value="Granby">Granby</option>
+                    <option value="Grand Lake">Grand Lake</option>
+                    <option value="Greeley">Greeley</option>
+                    <option value="Greenwood Village">Greenwood Village</option>
+                    <option value="Highlands Ranch">Highlands Ranch</option>
+                    <option value="Jamestown">Jamestown</option>
+                    <option value="Lafayette">Lafayette</option>
+                    <option value="Lakewood">Lakewood</option>
+                    <option value="Littleton">Littleton</option>
+                    <option value="Meeker">Meeker</option>
+                    <option value="Meredith">Meredith</option>
+                    <option value="Moab">Moab</option>
+                    <option value="Morrison">Morrison</option>
+                    <option value="Nathrop">Nathrop</option>
+                    <option value="Parker">Parker</option>
+                    <option value="Sedalia">Sedalia</option>
+                    <option value="Steamboat Springs">Steamboat Springs</option>
+                    <option value="Vail">Vail</option>
+                    <option value="Various">Various</option>
+                </select>
+            </div>
+            <div class="large-6 medium-6 small-6 columns">
+                <label>Camp type:</label>
+                <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
+                <select id="campType" class="filter" data-column-index='5'>
+                    <option value=" ">All</option>
+                    <option value="Day camp">Day camp</option>
+                    <option value="Overnight camp">Overnight camp</option>
+                    <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
+                </select>
+            </div>
         </div>
-        <div>
-            <label>Camp type:</label>
-            <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
-            <select id="campType" class="filter" data-column-index='5'>
-                <option value=" ">All</option>
-                <option value="Day camp">Day camp</option>
-                <option value="Overnight camp">Overnight camp</option>
-                <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
-            </select>
+        <div class="row">
+            <div class="large-6 medium-6 small-6 columns">
+                <label>Camp category :</label>
+                <!-- <input type='text' value='' class='filter' data-column-index='6'> -->
+                <select id="campCategory" class="filter" data-column-index='6'>
+                    <option value=" ">All</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Arts">Arts</option>
+                    <option value="General">General</option>
+                    <option value="Nature/Environment">Nature/Environment</option>
+                    <option value="Religious">Religious</option>
+                    <option value="Special Needs">Special Needs</option>
+                    <option value="Sports">Sports</option>
+                </select>
+            </div>
+            <div class="large-6 medium-6 small-6 columns">
+                <label>Camp cost:</label>
+                <select id="campCost" class="filter" data-column-index='11'>
+                    <option value=" ">All</option>
+                    <option value="$0 - $100">$0 - $100</option>
+                    <option value="$101 - $250">$101 - $250</option>
+                    <option value="$251 - $500">$251 - $500</option>
+                    <option value="$501 - Up">$501 - Up</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <label>Camp category :</label>
-            <!-- <input type='text' value='' class='filter' data-column-index='6'> -->
-            <select id="campCategory" class="filter" data-column-index='6'>
-                <option value=" ">All</option>
-                <option value="Academic">Academic</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Arts">Arts</option>
-                <option value="General">General</option>
-                <option value="Nature/Environment">Nature/Environment</option>
-                <option value="Religious">Religious</option>
-                <option value="Special Needs">Special Needs</option>
-                <option value="Sports">Sports</option>
-            </select>
+        <div class="row button-show">
+            <div class="large-12 columns">
+                <a href="#" class="button expand filter-button">Search</a>
+            </div>
         </div>
-        <div>
-            <label>Camp cost:</label>
-            <select id="campCost" class="filter" data-column-index='11'>
-                <option value=" ">All</option>
-                <option value="$0 - $100">$0 - $100</option>
-                <option value="$101 - $250">$101 - $250</option>
-                <option value="$251 - $500">$251 - $500</option>
-                <option value="$501 - Up">$501 - Up</option>
-            </select>
-        </div>
-            <button type="button" class="filter-button">
-                search
-            </button>
     </form>
-    <hr />
     <!-- TABLE -->
-    <div class="row">
+    <div class="row hidden" id="show-table">
         <div class="large-12 columns">
-            <table id="summer-camp-table" class="stripe" cellspacing="0" width="100%">
+            <table id="summer-camp-table" class="display" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th class="all">Name</th>
@@ -188,14 +178,22 @@
                 </thead>
                 <tfoot>
                 </tfoot>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </div>
     <script>
+
+document.querySelector("div.button-show").addEventListener("click", function(){
+    document.querySelector("div#show-table").style.display = "block";
+});
+
     $(document).ready(function() {
         var campTable = $('#summer-camp-table').DataTable({
             "ajax": 'summer_camps_all_2018.txt',
             responsive: true,
+            "order": [[ 8, "asc" ]],
             columns: [
                 { data: 'campName' },
                 { data: 'city' },
@@ -225,6 +223,11 @@
                 { data: 'descriptionDetailed' }
             ]
         });
+
+        campTable
+            .clear();
+            //.draw();
+
         $('.filter-button').on('click', function() {
             //clear global search values
             campTable.search('');
@@ -243,6 +246,9 @@
             $('.filter').val('');
         });
     });
+    </script>
+    <script>
+    $(document).foundation();
     </script>
 </body>
 
