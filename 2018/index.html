@@ -82,13 +82,51 @@
                 <option value='Boulder' class='filter' data-column-index='0'>Bouder</option>
                 <option value='Brighton' class='filter' data-column-index='0'>Brighton</option>
             </select> -->
-            <label>City :</label>
-            <input type='text' value='' class='filter' data-column-index='1'>
+            <label>City:</label>
+            <!-- <input type='text' value='' class='filter' data-column-index='1'> -->
+            <select id="city" class="filter" data-column-index='1'>
+                <option value=" ">All</option>
+                <option value="Aurora">Aurora</option>
+                <option value="Bailey">Bailey</option>
+                <option value="Boulder">Boulder</option>
+                <option value="Breckenridge ">Breckenridge </option>
+                <option value="Brighton">Brighton</option>
+                <option value="Centennial">Centennial</option>
+                <option value="Clark">Clark</option>
+                <option value="Cortez">Cortez</option>
+                <option value="Denver">Denver</option>
+                <option value="Durango">Durango</option>
+                <option value="Empire">Empire</option>
+                <option value="Englewood">Englewood</option>
+                <option value="Estes Park">Estes Park</option>
+                <option value="Florissant">Florissant</option>
+                <option value="Golden">Golden</option>
+                <option value="Granby">Granby</option>
+                <option value="Grand Lake">Grand Lake</option>
+                <option value="Greeley">Greeley</option>
+                <option value="Greenwood Village">Greenwood Village</option>
+                <option value="Highlands Ranch">Highlands Ranch</option>
+                <option value="Jamestown">Jamestown</option>
+                <option value="Lafayette">Lafayette</option>
+                <option value="Lakewood">Lakewood</option>
+                <option value="Littleton">Littleton</option>
+                <option value="Meeker">Meeker</option>
+                <option value="Meredith">Meredith</option>
+                <option value="Moab">Moab</option>
+                <option value="Morrison">Morrison</option>
+                <option value="Nathrop">Nathrop</option>
+                <option value="Parker">Parker</option>
+                <option value="Sedalia">Sedalia</option>
+                <option value="Steamboat Springs">Steamboat Springs</option>
+                <option value="Vail">Vail</option>
+                <option value="Various">Various</option>
+            </select>
         </div>
         <div>
-            <label>Camp type :</label>
+            <label>Camp type:</label>
             <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
-            <select id="campType" class="filter" name="filter" data-column-index='5'>
+            <select id="campType" class="filter" data-column-index='5'>
+                <option value=" ">All</option>
                 <option value="Day camp">Day camp</option>
                 <option value="Overnight camp">Overnight camp</option>
                 <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
@@ -96,11 +134,32 @@
         </div>
         <div>
             <label>Camp category :</label>
-            <input type='text' value='' class='filter' data-column-index='6'>
+            <!-- <input type='text' value='' class='filter' data-column-index='6'> -->
+            <select id="campCategory" class="filter" data-column-index='6'>
+                <option value=" ">All</option>
+                <option value="Academic">Academic</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Arts">Arts</option>
+                <option value="General">General</option>
+                <option value="Nature/Environment">Nature/Environment</option>
+                <option value="Religious">Religious</option>
+                <option value="Special Needs">Special Needs</option>
+                <option value="Sports">Sports</option>
+            </select>
         </div>
-        <button type="button" class="filter-button">
-            search
-        </button>
+        <div>
+            <label>Camp cost:</label>
+            <select id="campCost" class="filter" data-column-index='11'>
+                <option value=" ">All</option>
+                <option value="$0 - $100">$0 - $100</option>
+                <option value="$101 - $250">$101 - $250</option>
+                <option value="$251 - $500">$251 - $500</option>
+                <option value="$501 - Up">$501 - Up</option>
+            </select>
+        </div>
+            <button type="button" class="filter-button">
+                search
+            </button>
     </form>
     <hr />
     <!-- TABLE -->
