@@ -30,6 +30,10 @@
     <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-de.js"></script>
     <!-- <script src="ColumnFilterWidgets.js"></script> -->
     <style>
+    body {
+        background: #fafafa;
+    }
+
     .column-filter-widget {
         float: left;
         padding: 5px;
@@ -61,6 +65,10 @@
     .hidden {
         display: none;
     }
+
+    .paginate_button {
+        padding: 10px;
+    }
     </style>
 </head>
 
@@ -68,9 +76,9 @@
     <form>
         <div class="row">
             <div class="large-6 medium-6 small-6 columns">
-                <label>City:</label>
+                <label><strong>City</strong></label>
                 <!-- <input type='text' value='' class='filter' data-column-index='1'> -->
-                <select id="city" class="filter" data-column-index='1'>
+                <select id="city" class="filter" data-column-index='3'>
                     <option value=" ">All</option>
                     <option value="Aurora">Aurora</option>
                     <option value="Bailey">Bailey</option>
@@ -109,21 +117,9 @@
                 </select>
             </div>
             <div class="large-6 medium-6 small-6 columns">
-                <label>Camp type:</label>
-                <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
-                <select id="campType" class="filter" data-column-index='5'>
-                    <option value=" ">All</option>
-                    <option value="Day camp">Day camp</option>
-                    <option value="Overnight camp">Overnight camp</option>
-                    <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-6 medium-6 small-6 columns">
-                <label>Camp category :</label>
+                <label><strong>Camp category</strong></label>
                 <!-- <input type='text' value='' class='filter' data-column-index='6'> -->
-                <select id="campCategory" class="filter" data-column-index='6'>
+                <select id="campCategory" class="filter" data-column-index='4'>
                     <option value=" ">All</option>
                     <option value="Academic">Academic</option>
                     <option value="Adventure">Adventure</option>
@@ -135,14 +131,26 @@
                     <option value="Sports">Sports</option>
                 </select>
             </div>
+        </div>
+        <div class="row">
             <div class="large-6 medium-6 small-6 columns">
-                <label>Camp cost:</label>
+                <label><strong>Camp cost</strong></label>
                 <select id="campCost" class="filter" data-column-index='11'>
                     <option value=" ">All</option>
                     <option value="$0 - $100">$0 - $100</option>
                     <option value="$101 - $250">$101 - $250</option>
                     <option value="$251 - $500">$251 - $500</option>
                     <option value="$501 - Up">$501 - Up</option>
+                </select>
+            </div>
+            <div class="large-6 medium-6 small-6 columns">
+                <label><strong>Camp type</strong></label>
+                <!-- <input type='text' value='' class='filter' data-column-index='5'> -->
+                <select id="campType" class="filter" data-column-index='6'>
+                    <option value=" ">All</option>
+                    <option value="Day camp">Day camp</option>
+                    <option value="Overnight camp">Overnight camp</option>
+                    <!-- <option value="Day and overnight camp">Day and overnight camp</option> -->
                 </select>
             </div>
         </div>
@@ -158,22 +166,22 @@
             <table id="summer-camp-table" class="display" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th class="all">Name</th>
+                        <th class="all">Camp name</th>
+                        <th class="none">Summary</th>
+                        <th class="none">Description</th>
                         <th class="all">City</th>
+                        <th class="min-tablet">Category</th>
+                        <th class="none">Specialty</th>
+                        <th class="desktop">Type</th>
+                        <th class="min-tablet">Start date</th>
+                        <th class="min-tablet">End date</th>
+                        <th class="none">Date info</th>
+                        <th class="desktop">Ages</th>
+                        <th class="desktop">Cost</th>
+                        <th class="none">Cost info</th>
+                        <th class="none">Website</th>
                         <th class="none">E-mail</th>
                         <th class="none">Phone</th>
-                        <th class="none">Website</th>
-                        <th class="desktop">Camp Type</th>
-                        <th class="min-tablet">Camp Category</th>
-                        <th class="none">Camp Detail</th>
-                        <th class="min-tablet">Date Start</th>
-                        <th class="min-tablet">Date End</th>
-                        <th class="none">Date Detail</th>
-                        <th class="desktop">Cost</th>
-                        <th class="none">Cost Detail</th>
-                        <th class="desktop">Ages</th>
-                        <th class="none">Description</th>
-                        <th class="none">Details</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -184,49 +192,50 @@
         </div>
     </div>
     <script>
-
-document.querySelector("div.button-show").addEventListener("click", function(){
-    document.querySelector("div#show-table").style.display = "block";
-});
+    document.querySelector("div.button-show").addEventListener("click", function() {
+        document.querySelector("div#show-table").style.display = "block";
+    });
 
     $(document).ready(function() {
         var campTable = $('#summer-camp-table').DataTable({
             "ajax": 'summer_camps_all_2018.txt',
             responsive: true,
-            "order": [[ 8, "asc" ]],
+            "order": [
+                [6, "asc"]
+            ],
             columns: [
                 { data: 'campName' },
+                { data: 'descriptionBrief' },
+                { data: 'descriptionDetailed' },
                 { data: 'city' },
-                {
-                    data: 'emailAddress',
-                    render: function(data, type, row) {
-                        return '<a href="mailto:' + data + '">' + data + '</a>';
-                    }
-                },
-                { data: 'phoneNumber' },
+                { data: 'campCategory' },
+                { data: 'campSpecialty' },
+                { data: 'campType' },
+                { data: 'dateFrom' },
+                { data: 'dateTo' },
+                { data: 'dateDetail' },
+                { data: 'ageRange' },
+                { data: 'costCategory' },
+                { data: 'costDetail' },
                 {
                     data: 'website',
                     render: function(data, type, row) {
                         return '<a href="http://' + data + '" target="_blank">' + data + '</a>';
                     }
                 },
-                { data: 'campType' },
-                { data: 'campCategory' },
-                { data: 'campSpecialty' },
-                { data: 'dateFrom' },
-                { data: 'dateTo' },
-                { data: 'dateDetail' },
-                { data: 'costCategory' },
-                { data: 'costDetail' },
-                { data: 'ageRange' },
-                { data: 'descriptionBrief' },
-                { data: 'descriptionDetailed' }
+                {
+                    data: 'emailAddress',
+                    render: function(data, type, row) {
+                        return '<a href="mailto:' + data + '">' + data + '</a>';
+                    }
+                },
+                { data: 'phoneNumber' }
             ]
         });
 
         campTable
             .clear();
-            //.draw();
+        //.draw();
 
         $('.filter-button').on('click', function() {
             //clear global search values
