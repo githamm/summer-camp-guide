@@ -2303,6 +2303,24 @@
     "ageRange": "5-17",
     "descriptionBrief": "Professional Youth Theatre At Its Best!  The fun of summer camp with the culminating high of a full-scaled theatre production.",
     "descriptionDetailed": "Professional theatre staff,  10:1 student-teacher ratio, professional venues, & daily camp curriculum sculpted by 23 years of experience. Titles include \"Oliver, Anything Goes, Charlotte's Web, Moana\" & more."
+  },
+  {
+    "campName": "Keystone Science School Summer Camp",
+    "city": "Keystone",
+    "emailAddress": "Camp@KeystoneScienceSchool.org",
+    "phoneNumber": "970-455-4228",
+    "website": "KeystoneScienceSchool.org",
+    "campType": "Day and overnight camp",
+    "campCategory": "General",
+    "campSpecialty": "Keystone Science School Summer Camp will be the highlight of your child’s summer",
+    "dateFrom": "6/11/2018",
+    "dateTo": "8/17/2018",
+    "dateDetail": "",
+    "costCategory": "$101 - $250",
+    "costDetail": "Please refer to website for camp pricing. KeystoneScienceSchool.org. Special to the readers of the Denver Post Camp Guide we are offering $25 off any overnight program by using the promo code DP25 or receive $15 off any day camp program using the promo code DP15.",
+    "ageRange": "5-17",
+    "descriptionBrief": "Keystone Science School Camp programs blend hands-on science with outdoor, experiential education to create the best Summer Camp experience. The programs follow a progression that ensures campers can return each year for a fresh, exciting experience with new things to learn. From Day Camper to Discovery Overnight Camper to Keystone Mountain Adventurer or Counselor Assistant, campers have the opportunity to evolve from curious learners to confident leaders.",
+    "descriptionDetailed": "The programs follow a progression that ensures campers can return each year for a fresh, exciting experience with new things to learn. From Day Camper to Discovery Overnight Camper to Keystone Mountain Adventurer or Counselor Assistant, campers have the opportunity to evolve from curious learners to confident leaders."
   }
 ]
 }
