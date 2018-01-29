@@ -17,17 +17,17 @@
     <meta name="news_keywords" content="summer camps, camp, activities, kids, Denver, Colorado">
     <meta name="google-site-verification" content="2bKNvyyGh6DUlOvH1PYsmKN4KRlb-0ZI7TvFtuKLeAc" />
     <!-- STYLE SHEETS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.foundation.min.css" />
-    <link href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//extras.denverpost.com/libraries/foundation/foundation-min.css" />
+    <link rel="stylesheet" type="text/css" href="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/css/dataTables.foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/css/responsive.foundation.min.css" />
     <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
     <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script> -->
-    <script src="dataTables.min.js"></script>
-    <script src="http://extras.denverpost.com/foundation/js/foundation.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.10.11/sorting/date-de.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/jQuery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/js/dataTables.foundation.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/js/responsive.foundation.min.js"></script>
+    <script src="//extras.denverpost.com/foundation/js/foundation.min.js"></script>
     <!-- <script src="ColumnFilterWidgets.js"></script> -->
     <style>
     body {
@@ -64,10 +64,6 @@
 
     .hidden {
         display: none;
-    }
-
-    .paginate_button {
-        padding: 10px;
     }
     </style>
 </head>
@@ -192,6 +188,7 @@
         </div>
     </div>
     <script>
+    // show table on "search" button click
     document.querySelector("div.button-show").addEventListener("click", function() {
         document.querySelector("div#show-table").style.display = "block";
     });
@@ -201,7 +198,7 @@
             "ajax": 'summer_camps_all_2018.txt',
             responsive: true,
             "order": [
-                [6, "asc"]
+                [7, "asc"]
             ],
             columns: [
                 { data: 'campName' },
@@ -255,9 +252,6 @@
             $('.filter').val('');
         });
     });
-    </script>
-    <script>
-    $(document).foundation();
     </script>
 </body>
 
