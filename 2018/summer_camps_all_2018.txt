@@ -2501,6 +2501,24 @@
     "ageRange": "​13-18​",
     "descriptionBrief": "",
     "descriptionDetailed": "Campers will be instructed in the basics of what has been called the ultimate team sport. From 8-10AM on Cherry Creek reservoir, campers will learn boat safety and boat handling. Instructed by USRowing-certified coaches, aided by Mile High Rowing Club members, they’ll learn how to make the three parts of the rowing stroke flow together and to feel the thrill of a balanced boat moving through the water. Campers who are interested in learning to be coxswains will learn to steer and give commands in 8+s (the big, 62’ long, eight person boat). Please go to milehighrowing.org/post-78/ for the height and weight requirements."
+  },
+  {
+    "campName": "CU Denver Urban Ecology Camp",
+    "city": "Denver",
+    "emailAddress": "michael.ferrara@ucdenver.edu",
+    "phoneNumber": "303-315-1705",
+    "website": "clas.ucdenver.edu/community-outreach/k-12-outreach/urban-ecology-camp",
+    "campType": "Day camp",
+    "campCategory": "Nature/Environment",
+    "campSpecialty": "Wildlife, plants and other ecology in Denver",
+    "dateFrom": "6/25/2018",
+    "dateTo": "6/29/2018",
+    "dateDetail": "",
+    "costCategory": "$251 - $500",
+    "costDetail": "$350 including all trips; need-based scholarships available",
+    "ageRange": "Students entering 7th - 9th grade",
+    "descriptionBrief": "",
+    "descriptionDetailed": "Work with real scientists to explore Colorado ecology!  Students will collect data and samples from sites in Denver and on a research trip to Rocky Mountain National Park."
   }
 ]
 }
