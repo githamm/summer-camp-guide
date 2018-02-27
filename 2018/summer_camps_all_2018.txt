@@ -2519,6 +2519,42 @@
     "ageRange": "Students entering 7th - 9th grade",
     "descriptionBrief": "",
     "descriptionDetailed": "Work with real scientists to explore Colorado ecology!  Students will collect data and samples from sites in Denver and on a research trip to Rocky Mountain National Park."
+  },
+  {
+    "campName": "Camp Kind",
+    "city": "Westminster",
+    "emailAddress": "CampKindColorado@gmail.com",
+    "phoneNumber": 720-608-6099,
+    "website": "CampKind.org",
+    "campType": "Day camp",
+    "campCategory": "Nature/Environment",
+    "campSpecialty": "",
+    "dateFrom": "6/11/2018",
+    "dateTo": "7/20/2018",
+    "dateDetail": "",
+    "costCategory": "$101 - $250",
+    "costDetail": "Weekly Sessions",
+    "ageRange": "7-13",
+    "descriptionBrief": "",
+    "descriptionDetailed": "Make a lasting impression on your child this summer at Camp Kind, a unique day camp experience that imbues children with a love for helping others, the environment and community. Program includes diverse volunteer field trips and innovative kindness workshops in a fun camp environment."
+  },
+  {
+    "campName": "Commerce City Summer Camps",
+    "city": "Commerce City",
+    "emailAddress": "bcheevers@c3gov.com",
+    "phoneNumber": 303-289-3659,
+    "website": "c3gov.com/camp",
+    "campType": "Day camp",
+    "campCategory": "General",
+    "campSpecialty": "",
+    "dateFrom": "6/4/2018",
+    "dateTo": "8/3/2018",
+    "dateDetail": "Registration opens Feb. 20 and closes May 8. Camp starts June 4.",
+    "costCategory": "$101 - $250",
+    "costDetail": "$130 per week (Commerce City resident); $155 per week (Non-resident)",
+    "ageRange": "6-15",
+    "descriptionBrief": "",
+    "descriptionDetailed": "Leap into summer with full-day camps with whitewater rafting, horseback riding and more for kids ages 6-15! Enjoy swimming and field trips every day in a safe and friendly environment, with a low camper to staff ratio. Youth and teens will enjoy a variety of activities including arts and crafts, games, team-building, and more. Commerce City summer camps are state-licensed and CCAP-approved. Registration opens Feb. 20 and closes May 8. The cost is $130 per week for Commerce City residents and $155 per week for non-residents."
   }
 ]
 }
