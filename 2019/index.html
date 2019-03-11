@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Camp Directory 2019 | The Denver Post</title>
+    <link rel="canonical" href="http://extras.denverpost.com/summercamps/2017/index.html" />
+    <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
+    <meta name="distribution" content="global" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="title" content="Summer Camp Directory 2019" />
+    <meta name="language" content="en, sv" />
+    <meta name="Copyright" content="Copyright &copy; The Denver Post." />
+    <link rel="author" href="humans.txt" />
+    <meta name="description" content="A searchable directory of Colorado summer camps for 2019.">
+    <meta name="news_keywords" content="summer camps, camp, activities, kids, Denver, Colorado">
+    <meta name="google-site-verification" content="2bKNvyyGh6DUlOvH1PYsmKN4KRlb-0ZI7TvFtuKLeAc" />
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="//extras.denverpost.com/libraries/foundation/foundation-min.css" />
+    <link rel="stylesheet" type="text/css" href="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/css/dataTables.foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/css/responsive.foundation.min.css" />
+    <link rel="shortcut icon" href="http://extras.mnginteractive.com/live/media/favIcon/dpo/favicon.ico" type="image/x-icon" />
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/jQuery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/DataTables-1.10.16/js/dataTables.foundation.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="//extras.denverpost.com/libraries/datatables/Responsive-2.2.1/js/responsive.foundation.min.js"></script>
+    <script src="//extras.denverpost.com/foundation/js/foundation.min.js"></script>
+    <!-- <script src="ColumnFilterWidgets.js"></script> -->
+    <style>
+    body {
+        background: #fafafa;
+    }
+
+    .column-filter-widget {
+        float: left;
+        padding: 5px;
+    }
+
+    .column-filter-widget select {
+        display: block;
+    }
+
+    .column-filter-widgets a.filter-term {
+        display: block;
+        text-decoration: none;
+        padding-left: 10px;
+        font-size: 90%;
+    }
+
+    .column-filter-widgets a.filter-term:hover {
+        text-decoration: line-through !important;
+    }
+
+    .column-filter-widget-selected-terms {
+        clear: left;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter input {
+        margin-bottom: 15px;
+    }
+
+    .hidden {
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <!-- <div class="large-6 medium-6 small-6 columns">
+                <label><strong>City</strong></label>
+                <select id="city" class="filter" data-column-index='3'>
+                    <option value=" ">All</option>
+                    <option value="Aurora">Aurora</option>
+                    <option value="Bailey">Bailey</option>
+                    <option value="Boulder">Boulder</option>
+                    <option value="Breckenridge ">Breckenridge </option>
+                    <option value="Brighton">Brighton</option>
+                    <option value="Centennial">Centennial</option>
+                    <option value="Clark">Clark</option>
+                    <option value="Commerce City">Commerce City</option>
+                    <option value="Cortez">Cortez</option>
+                    <option value="Denver">Denver</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Empire">Empire</option>
+                    <option value="Englewood">Englewood</option>
+                    <option value="Estes Park">Estes Park</option>
+                    <option value="Florissant">Florissant</option>
+                    <option value="Golden">Golden</option>
+                    <option value="Granby">Granby</option>
+                    <option value="Grand Lake">Grand Lake</option>
+                    <option value="Greeley">Greeley</option>
+                    <option value="Greenwood Village">Greenwood Village</option>
+                    <option value="Highlands Ranch">Highlands Ranch</option>
+                    <option value="Jamestown">Jamestown</option>
+                    <option value="Keystone">Keystone</option>
+                    <option value="Lafayette">Lafayette</option>
+                    <option value="Lakewood">Lakewood</option>
+                    <option value="Littleton">Littleton</option>
+                    <option value="Meeker">Meeker</option>
+                    <option value="Meredith">Meredith</option>
+                    <option value="Moab">Moab</option>
+                    <option value="Morrison">Morrison</option>
+                    <option value="Nathrop">Nathrop</option>
+                    <option value="Nederland">Nederland</option>
+                    <option value="Parker">Parker</option>
+                    <option value="Sedalia">Sedalia</option>
+                    <option value="Steamboat Springs">Steamboat Springs</option>
+                    <option value="Vail">Vail</option>
+                    <option value="Various">Various</option>
+                    <option value="Westminster">Westminster</option>
+                </select>
+            </div> -->
+            <div class="large-6 medium-6 small-6 columns">
+                <label><strong>Camp category</strong></label>
+                <select id="campCategory" class="filter" data-column-index='3'>
+                    <option value=" ">All</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Arts">Arts</option>
+                    <option value="General">General</option>
+                    <option value="Nature/Environment">Nature/Environment</option>
+                    <option value="Religious">Religious</option>
+                    <option value="Special Needs">Special Needs</option>
+                    <option value="Sports">Sports</option>
+                </select>
+            </div>
+            <div class="large-6 medium-6 small-6 columns">
+                <label><strong>Camp type</strong></label>
+                <select id="campType" class="filter" data-column-index='4'>
+                    <option value=" ">All</option>
+                    <option value="Day camp">Day camp</option>
+                    <option value="Overnight camp">Overnight camp</option>
+                    <option value="Day & overnight">Day and overnight camp</option>
+                </select>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="large-6 medium-6 small-6 columns">
+                <label><strong>Camp cost</strong></label>
+                <select id="campCost" class="filter" data-column-index='11'>
+                    <option value=" ">All</option>
+                    <option value="$0 - $100">$0 - $100</option>
+                    <option value="$101 - $250">$101 - $250</option>
+                    <option value="$251 - $500">$251 - $500</option>
+                    <option value="$501 - Up">$501 - Up</option>
+                </select>
+            </div>
+            <div class="large-6 medium-6 small-6 columns">
+                <label><strong>Camp type</strong></label>
+                <select id="campType" class="filter" data-column-index='4'>
+                    <option value=" ">All</option>
+                    <option value="Day camp">Day camp</option>
+                    <option value="Overnight camp">Overnight camp</option>
+                    <option value="Day & overnight">Day and overnight camp</option>
+                </select>
+            </div>
+        </div> -->
+        <div class="row button-show">
+            <div class="large-12 columns">
+                <a href="#" class="button expand filter-button">Search</a>
+            </div>
+        </div>
+    </form>
+    <!-- TABLE -->
+    <div class="row hidden" id="show-table">
+        <div class="large-12 columns">
+            <table id="summer-camp-table" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="all">Camp name</th>
+                        <!-- <th class="none">Summary</th> -->
+                        <th class="none">Description</th>
+                        <th class="all">Location</th>
+                        <th class="min-tablet">Category</th>
+                        <!-- <th class="none">Specialty</th> -->
+                        <th class="desktop">Type</th>
+                        <th class="min-tablet">Dates</th>
+                        <!-- <th class="min-tablet">End date</th> -->
+                        <!-- <th class="none">Date info</th> -->
+                        <th class="desktop">Ages</th>
+                        <th class="desktop">Cost</th>
+                        <!-- <th class="none">Cost info</th> -->
+                        <th class="none">Website</th>
+                        <th class="none">E-mail</th>
+                        <th class="none">Phone</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                </tfoot>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+    // show table on "search" button click
+    document.querySelector("div.button-show").addEventListener("click", function() {
+        document.querySelector("div#show-table").style.display = "block";
+    });
+
+    $(document).ready(function() {
+        var campTable = $('#summer-camp-table').DataTable({
+            "ajax": 'summer_camps_all_2019.json',
+            responsive: true,
+            "order": [
+                [3, "asc"]
+            ],
+            "pageLength": 25,
+            columns: [
+                { data: 'campName' },
+                { data: 'campDescription' },
+                // { data: 'descriptionDetailed' },
+                {
+                    orderable: false,
+                    data: 'address'
+                },
+                { data: 'campCategory' },
+                // { data: 'campSpecialty' },
+                { data: 'campType' },
+                {
+                    orderable: false,
+                    data: 'campDate'
+                },
+                // { orderable: false,
+                //     data: 'dateTo' },
+                // { data: 'dateDetail' },
+                {
+                    orderable: false,
+                    data: 'campAges'
+                },
+                {
+                    orderable: false,
+                    data: 'campCost'
+                },
+                // { data: 'costDetail' },
+                {
+                    data: 'website',
+                    render: function(data, type, row) {
+                        return '<a href="//www.' + data + '" target="_blank">' + data + '</a>';
+                    }
+                },
+                {
+                    data: 'emailAddress',
+                    render: function(data, type, row) {
+                        return '<a href="mailto:' + data + '">' + data + '</a>';
+                    }
+                },
+                { data: 'phoneNumber' }
+            ]
+        });
+
+        campTable
+            .clear();
+        //.draw();
+
+        $('.filter-button').on('click', function() {
+            //clear global search values
+            campTable.search('');
+            $('.filter').each(function() {
+                if (this.value.length) {
+                    campTable.column($(this).data('columnIndex')).search(this.value);
+                }
+            });
+            campTable.draw();
+        });
+
+        $(".dataTables_filter input").on('keyup change', function() {
+            //clear column search values
+            campTable.columns().search('');
+            //clear input values
+            $('.filter').val('');
+        });
+    });
+    </script>
+</body>
+
+</html>
